@@ -1,0 +1,42 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>@title</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        <script src="@routes.Assets.at("javascripts/jquery-1.9.0.min.js")" type="text/javascript"></script>
+    </head>
+    <body>
+    	<div class="row" style="padding-left:10px;inline-block; width:1400px;">
+        	<div class="span3 bs-docs-sidebar">
+                <div class="well sidebar-nav">
+                	<ul class="nav nav-list">
+        				<li class="active"><a tabindex="-1" href="#" >PURCHASE ORDERS</a></li>
+                        <li><a tabindex="-1" href="bills-of-lading-list.html" >BILLS OF LADING</a></li>
+                        <li><a tabindex="-1" href="incoming-meat-list.html" >INCOMING MEAT</a></li>
+                        <li><a tabindex="-1" href="profile-form.html" >PROFILE</a></li>
+                        <li><a tabindex="-1" href="#" >SYSTEM MANAGEMENT</a></li>
+                        <li><a tabindex="-1" href="#">&nbsp;&nbsp;&nbsp;&nbsp;Users</a></li>
+                        <li><a tabindex="-1" href="#">&nbsp;&nbsp;&nbsp;&nbsp;Roles</a></li>
+                        <li><a tabindex="-1" href="#">&nbsp;&nbsp;&nbsp;&nbsp;Product Groups</a></li>
+                        <li><a tabindex="-1" href="#">&nbsp;&nbsp;&nbsp;&nbsp;Sessions</a></li>
+                        <li><a tabindex="-1" href="#">&nbsp;&nbsp;&nbsp;&nbsp;Settings</a></li>
+                        <li><a tabindex="-1" href="#">&nbsp;&nbsp;&nbsp;&nbsp;Data Tables</a></li>
+                        <li class="divider"><a tabindex="-1" href="#"></a></li>
+                        <li><a tabindex="-1" href="#" >Logout</a></li>
+                	</ul>
+                </div>
+            </div>
+        
+
+	 		<div class="span20">
+	        	<div id="content" style="width:960px;">
+					@content
+				</div>
+			</div>
+		</div>
+    </body>
+</html>
